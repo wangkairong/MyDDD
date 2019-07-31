@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDDD.UI.Web", "MyDDD.UI.Web\MyDDD.UI.Web.csproj", "{F0183FB4-88CF-40D5-9227-6F08CCFED3FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDDD.UI.Web", "MyDDD.UI.Web\MyDDD.UI.Web.csproj", "{F0183FB4-88CF-40D5-9227-6F08CCFED3FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDDD.Domain", "MyDDD.Domain\MyDDD.Domain.csproj", "{006E3FCF-927C-4F50-8619-31A233A22ADF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDDD.Domain", "MyDDD.Domain\MyDDD.Domain.csproj", "{006E3FCF-927C-4F50-8619-31A233A22ADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDDD.Infrastruct.Data", "MyDDD.Infrastruct.Data\MyDDD.Infrastruct.Data.csproj", "{270CF341-AA35-4472-A017-DC71522CD650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDDD.Infrastruct.Data", "MyDDD.Infrastruct.Data\MyDDD.Infrastruct.Data.csproj", "{270CF341-AA35-4472-A017-DC71522CD650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDDD.Application", "MyDDD.Application\MyDDD.Application.csproj", "{180B7A05-11B6-417D-8279-B73DF535743D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDDD.Application", "MyDDD.Application\MyDDD.Application.csproj", "{180B7A05-11B6-417D-8279-B73DF535743D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDDD.Domain.Core", "MyDDD.Domain.Core\MyDDD.Domain.Core.csproj", "{3A8AC754-F031-49AE-88C5-A7051A77C93B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{180B7A05-11B6-417D-8279-B73DF535743D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180B7A05-11B6-417D-8279-B73DF535743D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{180B7A05-11B6-417D-8279-B73DF535743D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8AC754-F031-49AE-88C5-A7051A77C93B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8AC754-F031-49AE-88C5-A7051A77C93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8AC754-F031-49AE-88C5-A7051A77C93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8AC754-F031-49AE-88C5-A7051A77C93B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

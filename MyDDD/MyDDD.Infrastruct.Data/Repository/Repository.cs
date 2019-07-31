@@ -1,6 +1,9 @@
-﻿using MyDDD.Domain.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using MyDDD.Domain.Interfaces;
+using MyDDD.Infrastruct.Data.Context;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MyDDD.Infrastruct.Data
@@ -11,39 +14,49 @@ namespace MyDDD.Infrastruct.Data
     /// <typeparam name="TEntity"></typeparam>
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        void IRepository<TEntity>.Add(TEntity obj)
+        protected readonly StudyContext Db;
+        protected readonly DbSet<TEntity> DbSet;
+
+
+        public Repository(StudyContext context)
         {
-            throw new NotImplementedException();
+            Db = context;
+            DbSet = Db.Set<TEntity>();
+        }
+       public virtual void Add(TEntity obj)
+        {
+            DbSet.Add(obj);
         }
 
-        void IRepository<TEntity>.Delete(Guid id)
+       public virtual void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            DbSet.Remove(DbSet.Find(id));
         }
 
-        void IDisposable.Dispose()
+       public void Dispose()
         {
-            throw new NotImplementedException();
+            Db.Dispose();
+            GC.SuppressFinalize(this);
         }
 
-        System.Linq.IQueryable<TEntity> IRepository<TEntity>.GetAll()
+        public virtual IQueryable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return DbSet;
         }
 
-        TEntity IRepository<TEntity>.GetById(Guid id)
+       public virtual TEntity GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return DbSet.Find(id);
         }
 
-        int IRepository<TEntity>.SaveChenges()
+       public int SaveChenges()
         {
-            throw new NotImplementedException();
+            return Db.SaveChanges();
         }
 
-        void IRepository<TEntity>.Update(TEntity obj)
+       public virtual void Update(TEntity obj)
         {
-            throw new NotImplementedException();
+            DbSet.Update(obj);
         }
     }
 }
