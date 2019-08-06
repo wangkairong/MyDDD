@@ -1,6 +1,6 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "server=.;uid=sa;pwd=123;database=EDU"
+    "DefaultConnection": "server=loaclhost;uid=sa;pwd=Aa123456;database=MyDDD"
   },
   "Logging": {
     "IncludeScopes": false,

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyDDD.UI.Web.Extensions;
 
 namespace MyDDD.UI.Web
 {
@@ -31,8 +32,12 @@ namespace MyDDD.UI.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+           
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            // .NET Core 原生依赖注入
+            // 单写一层用来添加依赖项，从展示层 Presentation 中隔离
+            NativeInjectorBootStrapper.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
